@@ -1,60 +1,38 @@
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #667eea, #764ba2);
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.wrapper {
-  width: 100%;
-  max-width: 400px;
-  padding: 20px;
-}
-
-.login-box {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 30px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-.login-box h1 {
-  text-align: center;
-  margin-bottom: 25px;
+  padding: 0;
+  background: #f4f4f4;
   color: #333;
 }
 
-.input-group {
-  margin-bottom: 15px;
-}
-
-.input-group label {
-  display: block;
-  margin-bottom: 5px;
-  color: #555;
-}
-
-.input-group input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-button {
-  width: 100%;
-  padding: 12px;
-  background-color: #667eea;
+header {
+  background: #005f73;
   color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
+  padding: 2rem;
+  text-align: center;
 }
 
-button:hover {
-  background-color: #5a67d8;
+section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+h2 {
+  color: #0a9396;
+}
+
+.project {
+  background: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #94d2bd;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #005f73;
+  color: white;
 }
