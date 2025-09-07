@@ -1,53 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kushal | GIS & Info Systems Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: #222;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 { margin-bottom: 10px; }
+    header nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    header nav a:hover { color: #f39c12; }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    #about, #projects, #contact {
+      margin-top: 40px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #222;
+      text-align: center;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .card:hover { transform: scale(1.05); }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    input, textarea {
+      margin: 10px 0;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      background: #222;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover { background: #f39c12; }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: #fff;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <h1>Kushal</h1>
-    <p>Student | GIS & Information Systems | Remote Sensing Enthusiast</p>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
+  <!-- About -->
   <section id="about">
     <h2>About Me</h2>
-    <p>I’m a detail-driven student specializing in geospatial science and information systems. I love turning complex data into clear, actionable insights—especially through thematic mapping and remote sensing.</p>
+    <p style="text-align:center; max-width:700px; margin:auto;">
+      Hello! I'm [Your Name], a passionate [Your Field/Skillset]. 
+      I love building creative and impactful solutions, learning new technologies, 
+      and sharing knowledge with others. This portfolio showcases some of my projects and work.
+    </p>
   </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>GIS & Remote Sensing (Spectral Signatures, Sensor Specs)</li>
-      <li>R Programming (Data Analysis, Mapping Workflows)</li>
-      <li>Academic Writing & Technical Summarization</li>
-      <li>Networking Basics (WAN Ports, Virtual Servers)</li>
-    </ul>
-  </section>
-
+  <!-- Projects -->
   <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Fiji/Viti Levu Thematic Maps</h3>
-      <p>Designed original maps exploring climate, internet access, and sports distribution using RStudio and QGIS.</p>
-    </div>
-    <div class="project">
-      <h3>Data Scavenger Forum Posts</h3>
-      <p>Created GIS-ready datasets and forum replies focused on accessibility and originality.</p>
+    <h2>My Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Project 1</h3>
+        <p>Short description of project 1. What problem it solved or what skills it demonstrates.</p>
+      </div>
+      <div class="card">
+        <h3>Project 2</h3>
+        <p>Short description of project 2. Mention tools/technologies used.</p>
+      </div>
+      <div class="card">
+        <h3>Project 3</h3>
+        <p>Short description of project 3. Include key highlights.</p>
+      </div>
     </div>
   </section>
 
+  <!-- Contact -->
   <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: your.email@example.com</p>
-    <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
-    <p>GitHub: <a href="#">github.com/yourusername</a></p>
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Kushal. Built with HTML & CSS.</p>
+    <p>© 2025 My Portfolio | Built with ❤️</p>
   </footer>
+
 </body>
 </html>
+
