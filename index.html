@@ -420,7 +420,7 @@
                 </div>
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80" alt="Project 3">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwa90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80" alt="Project 3">
                     </div>
                     <div class="project-info">
                         <h3>Financial Dashboard</h3>
@@ -471,14 +471,14 @@
 
     <!-- Music Player -->
     <div class="music-player">
-        <button id="playPauseBtn"><i class="fas fa-play"></i></button>
-        <p>Now Playing: Cinnamon Girl - Lana Del Rey</p>
+        <button id="playPauseBtn"><i class="fas fa-pause"></i></button>
+        <p>Now Playing: Cinnamon Girl (Instrumental) - Lana Del Rey</p>
     </div>
 
     <!-- Audio Element -->
     <audio id="bgMusic" loop>
-        <!-- Replace with actual song file in a real implementation -->
-        <source src="https://cdn.pixabay.com/download/audio/2022/01/20/audio_dc39bb1412.mp3?filename=soft-inspiring-background-amp-piano-118855.mp3" type="audio/mpeg">
+        <!-- In a real implementation, you would use the actual instrumental version -->
+        <source src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_7b6073fa9c.mp3?filename=cinematic-ambient-piano-118585.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
@@ -488,22 +488,23 @@
             const playPauseBtn = document.getElementById('playPauseBtn');
             const playIcon = playPauseBtn.querySelector('i');
             
-            // Try to play music automatically when page loads
+            // Play music automatically when page loads
             const playMusic = () => {
+                audio.volume = 0.3; // Set volume to 30% to be less intrusive
                 audio.play().then(() => {
                     playIcon.classList.remove('fa-play');
                     playIcon.classList.add('fa-pause');
+                    console.log('Music started playing automatically');
                 }).catch(error => {
                     console.log('Autoplay prevented:', error);
+                    // Show a message to the user if autoplay is blocked
+                    const musicPlayer = document.querySelector('.music-player');
+                    musicPlayer.innerHTML += '<span style="margin-left:10px;color:#ff6b6b;">Click to play music</span>';
                 });
             };
             
-            // Add a one-time user interaction event to start audio
-            document.body.addEventListener('click', function() {
-                playMusic();
-                // Remove this event after first interaction
-                document.body.removeEventListener('click', arguments.callee);
-            });
+            // Start playing immediately
+            playMusic();
             
             // Play/Pause button functionality
             playPauseBtn.addEventListener('click', function() {
